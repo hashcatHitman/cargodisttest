@@ -66,3 +66,6 @@ libcue-dev = '*'
 [dist.dependencies.chocolatey]
 lftp = '*'
 cmake = '3.27.6'
+
+[dist.github-custom-runners.aarch64-pc-windows-msvc]
+container = "messense/cargo-xwin"
