@@ -53,6 +53,8 @@ jobs:
       tag: ${{ !github.event.pull_request && github.ref_name || '' }}
       tag-flag: ${{ !github.event.pull_request && format('--tag={0}', github.ref_name) || '' }}
       publishing: ${{ !github.event.pull_request }}
+    permissions:
+      contents: read # Required by `actions/checkout` in private repos.
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
